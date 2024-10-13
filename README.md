@@ -1,5 +1,5 @@
 <p align="center"> 
-  <h3 align="center">VTOP Activity Chrome Extension</h3>
+  <h3 align="center">VTOP Activity Extension</h3>
   <p align="center">
     A Chrome extension that keeps your VTOP session active by periodically sending background requests to prevent session timeouts.
     <br /> <br />
