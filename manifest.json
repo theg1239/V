@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "VTOP Activity",
+    "version": "1.0",
+    "description": "Sends periodic requests to VTOP to simulate user activity in the background.",
+    "permissions": [
+      "alarms",
+      "cookies",
+      "scripting",
+      "tabs"
+    ],
+    "host_permissions": [
+      "https://vtop.vit.ac.in/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
