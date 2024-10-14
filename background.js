@@ -1,6 +1,5 @@
-
 chrome.alarms.create('activityAlarm', {
-    periodInMinutes: 10
+    periodInMinutes: 1
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
@@ -24,19 +23,7 @@ function keepVTOPSessionAlive() {
                 }
             });
         } else {
-            chrome.tabs.create({ url: 'https://vtop.vit.ac.in/vtop/content', active: false }, (tab) => {
-                chrome.scripting.executeScript({
-                    target: { tabId: tab.id },
-                    func: extractTokensAndSendRequest
-                }, (results) => {
-                    if (chrome.runtime.lastError) {
-                        console.error('Failed to execute script:', chrome.runtime.lastError.message);
-                    } else {
-                        console.log('Request sent successfully:', results);
-                        chrome.tabs.remove(tab.id);
-                    }
-                });
-            });
+            console.error('No active VTOP tab found. Please make sure you have a VTOP tab open.');
         }
     });
 }
