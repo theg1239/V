@@ -1,5 +1,5 @@
 chrome.alarms.create('activityAlarm', {
-    periodInMinutes: 1
+    periodInMinutes: 10
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
